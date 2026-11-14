@@ -13,7 +13,6 @@ class Solution {
             arr.add(sum);
         }
 
-        int max = Collections.max(arr);
-        return max;
+        return Collections.max(arr);
     }
 }
