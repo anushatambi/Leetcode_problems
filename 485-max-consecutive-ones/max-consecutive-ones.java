@@ -4,18 +4,18 @@ import java.util.Collections;
 
 class Solution {
     public int findMaxConsecutiveOnes(int[] nums) {
-        int c=0;
-        ArrayList<Integer> list=new ArrayList<>(10);
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]==1){
-                c+=1;
+        int c = 0, max = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1) {
+                c++;
             }
-            else{
-               list.add(c);
-               c=0; 
+            else {
+                c = 0;
             }
+
+            max = Math.max(max, c);
         }
-        list.add(c);
-        return Collections.max(list);
+
+        return max;
     }
 }
